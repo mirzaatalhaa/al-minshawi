@@ -8,9 +8,9 @@ export default function Page() {
       </div>
       <div className="grain fixed inset-0 -z-10" aria-hidden="true" />
       <img
-        src="/logo.png"
+        src="/logo2.png"
         alt="Sheikh Muhammad Siddiq Al-Minshawi"
-        className="pointer-events-none fixed left-1/2 top-1/2 z-0 w-[min(82vw,620px)] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_18px_42px_rgba(0,0,0,0.5)]"
+        className="pointer-events-none fixed left-1/2 top-1/2 z-0 w-[min(90vw,760px)] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_18px_42px_rgba(0,0,0,0.5)]"
       />
       <RecitationStation />
     </main>
