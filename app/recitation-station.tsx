@@ -10,12 +10,12 @@ type YouTubePlayer = { playVideo(): void; pauseVideo(): void; loadVideoById(id: 
 declare global { interface Window { YT?: { Player: new (element: HTMLElement, options: object) => YouTubePlayer; PlayerState: { PLAYING: number; PAUSED: number; ENDED: number } }; onYouTubeIframeAPIReady?: () => void; } }
 
 const RECITER = "Sheikh Muhammad Siddiq Al-Minshawi";
-const AUTHORIZED_PLAYLIST_ID = "PLLP_o6A_R0tUGaOBCgnJR_oMp9Z4rcT_0";
+const AUTHORIZED_PLAYLIST_ID = "PLxpAkjlGauHdUcO_uc-8F8J2NUQRDZjPG";
 // Replace each videoId with an embeddable upload from a rights holder you are authorized to use.
 // `duration: 0` deliberately displays “—” until its verified duration is supplied alongside the ID.
 const playlists: Playlist[] = [
   { title: "Selected Surahs", tracks: [
-    { id: "authorized-playlist", surahNumber: 0, surahName: "Sheikh Minshawi Recitations", arabicName: "تلاوات الشيخ المنشاوي", reciter: RECITER, juz: "Authorized playlist", duration: 0, videoId: "dEYJbD25QVM" },
+    { id: "authorized-playlist", surahNumber: 0, surahName: "Sheikh Minshawi Recitations", arabicName: "تلاوات الشيخ المنشاوي", reciter: RECITER, juz: "YouTube Music playlist", duration: 0, videoId: "dEYJbD25QVM" },
     { id: "mulk", surahNumber: 67, surahName: "Surah Al-Mulk", arabicName: "سورة الملك", reciter: RECITER, juz: "Juz 29", duration: 0, videoId: "REPLACE_WITH_AUTHORIZED_VIDEO_ID" },
     { id: "rahman", surahNumber: 55, surahName: "Surah Ar-Rahman", arabicName: "سورة الرحمن", reciter: RECITER, juz: "Juz 27", duration: 0, videoId: "REPLACE_WITH_AUTHORIZED_VIDEO_ID" },
   ] },
@@ -53,7 +53,7 @@ function SkipIcon({ next = false }: { next?: boolean }) { return <svg className=
 
 const Clock = memo(function Clock() {
   const [time, setTime] = useState("");
-  useEffect(() => { const update = () => setTime(new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", hour: "numeric", minute: "2-digit", hour12: true }).format(new Date())); update(); const interval = window.setInterval(update, 1000); return () => window.clearInterval(interval); }, []);
+  useEffect(() => { const update = () => setTime(new Intl.DateTimeFormat("en-SA", { timeZone: "Asia/Riyadh", hour: "numeric", minute: "2-digit", hour12: true }).format(new Date())); update(); const interval = window.setInterval(update, 1000); return () => window.clearInterval(interval); }, []);
   const [hour, minute] = time.split(":");
   return <span>{hour}<i className="clock-colon not-italic">:</i>{minute}</span>;
 });
